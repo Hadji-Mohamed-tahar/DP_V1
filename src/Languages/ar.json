@@ -1,0 +1,18 @@
+{
+  "TruckerORClient": "هل تريد التسجيل ك :",
+  "Trucker": "سائق",
+  "Client": "زبون",
+  "LoginAccount":"تسجيل الدخول ",
+  "welcomeBack":"مرحبا, بعودتك",
+  "Or":"او",
+  "LoginGoogle":"سجل الدخول مع جوجل",
+  "NotRegistered":"الم تسجل بعد ؟",
+  "CreateAccount":"انشئ حسابك",
+  "Login":"تسجيل الدخول",
+  "Email":"البريد الالكتروني",
+  "Password":"كلمة السر",
+  "PasswordC":"تاكيد كلمة السر",
+  "SignUp":"تسجيل جديد",
+  "Conditoin":"اقبل بجميع الشروط",
+  "HaveAccount":"هل ليك حساب بالفعل ؟"
+}

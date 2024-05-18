@@ -6,7 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Phone from "../../../components/auth/Phone";
 import Email from "../../../components/auth/Email";
-
+import i18n from "../../../Languages/i18n";
 const Login = ({ navigation }) => {
   const [click, setClick] = useState(false);
   const [backColor, setBackColor] = useState("");
@@ -25,10 +25,12 @@ const Login = ({ navigation }) => {
   return (
     <View className="flex-1 items-start justify-start w-full h-screen bg-white pt-14 mt-14">
       <Text style={{ fontSize: 20 }} className="text-black font-bold pl-9 mb-1">
-        Login Account
+        {/* Login Account */}
+        {i18n.t("LoginAccount")}
       </Text>
       <Text style={{ fontSize: 15 }} className="text-gray-400 font-bold pl-9">
-        Hello, welcome back to our account
+        {/* Hello, welcome back to our account */}
+        {i18n.t("welcomeBack")}
       </Text>
       {/* Phone or Email */}
       <View
@@ -65,13 +67,20 @@ const Login = ({ navigation }) => {
         </View>
       </View>
       {/* Phone  */}
-      <View className="mx-auto">{click ? <Phone /> : <Email navigation={navigation} />}</View>
+      <View className="mx-auto">
+        {click ? <Phone /> : <Email navigation={navigation} />}
+      </View>
       {/* Or  */}
       <View className="flex-row w-full space-x-3 items-center justify-center mt-10">
         <View style={{ width: 130 }} className="border-b">
-          <Text className="text-white">Or</Text>
+          <Text className="text-white">
+            Or
+            {i18n.t("Or")}
+          </Text>
         </View>
-        <Text className="mt-1">Or</Text>
+        <Text className="mt-1">
+          {i18n.t("Or")}
+          </Text>
         <View style={{ width: 130 }} className="border-b">
           <Text className="text-white">Or</Text>
         </View>
@@ -85,19 +94,20 @@ const Login = ({ navigation }) => {
           />
           {/* <AntDesign name="google" size={24} color="white" /> */}
           <Text className="font-bold text-black text-center">
-            Login With Google
+          
+          {i18n.t("LoginGoogle")}
           </Text>
         </TouchableOpacity>
       </View>
       {/* Not registre yet */}
       <View className="mx-14 mt-4 flex-row space-x-2">
-        <Text className="text-gray-400">Not Registered yet?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate("SignUpClient")}>
-          <Text
-            className="text-orange-500"
-          >
-            Create Account
+        <Text className="text-gray-400">
+        {i18n.t("NotRegistered")}
           </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUpClient")}>
+          <Text className="text-orange-500">
+          {i18n.t("CreateAccount")}         
+             </Text>
         </TouchableOpacity>
       </View>
     </View>

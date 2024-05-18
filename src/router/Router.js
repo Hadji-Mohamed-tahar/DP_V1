@@ -44,8 +44,8 @@ import SignUpClient from "../screens/client/auth/SignUpClient";
 import Client_info from "../screens/client/After_signUp/Client_info";
 import Wait_Response from "../screens/trucker/WaitResponse/WaitResponse.js";
 import Trucker_Registre from "../screens/trucker/TruckerRegister/Trucker_Registre.js";
-import EmailTrucker from '../components/trucker/auth/Email.js';
-
+import EmailTrucker from "../components/trucker/auth/Email.js";
+import ChooseLanguage from "../screens/ChooseLanguage.js";
 
 const Router = () => {
   const Stack = createStackNavigator();
@@ -62,6 +62,12 @@ const Router = () => {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="ChooseLanguage"
+          component={ChooseLanguage}
           options={{ headerShown: false }}
         />
 

@@ -14,6 +14,7 @@ import { FirebaseAuth , db } from "../../Firebase/firebase_config"; // Import Fi
 import { useNavigation } from "@react-navigation/native";
 import { AuthContext } from "../../Context/client/AuthContext";
 import Servicess from "../../Shared/Servicess";
+import i18n from "../../Languages/i18n";
 
 
 const Email_Registre = () => {
@@ -105,7 +106,7 @@ const Email_Registre = () => {
           </View>
           <View className="pb-2">
             <TextInput
-              placeholder="Email"
+              placeholder={i18n.t("Email")}
               onChangeText={(Text) => setEmail(Text)}
               value={email}
             />
@@ -120,7 +121,7 @@ const Email_Registre = () => {
           </View>
           <View className="pb-2">
             <TextInput
-              placeholder="Password"
+              placeholder={i18n.t("Password")}
               onChangeText={(Text) => setPassword(Text)}
               secureTextEntry={true}
             />
@@ -135,7 +136,7 @@ const Email_Registre = () => {
           </View>
           <View className="pb-2">
             <TextInput
-              placeholder="Password Confirmation"
+              placeholder={i18n.t("PasswordC")}
               onChangeText={(Text) => setPasswordConfirm(Text)}
               secureTextEntry={true}
             />
@@ -149,7 +150,7 @@ const Email_Registre = () => {
             {!checked && <AntDesign name="check" size={20} color="white" />}
           </Pressable>
           <Text className="text-gray-500">
-            Do you agree to all terms and conditoin
+          {i18n.t("Conditoin")}
           </Text>
         </View>
       </View>
@@ -166,7 +167,7 @@ const Email_Registre = () => {
               className="w-80 rounded-xl p-4"
             >
               <Text className="text-white font-bold text-center">
-                Create Account
+              {i18n.t("Login")}
               </Text>
             </TouchableOpacity>
           </View>

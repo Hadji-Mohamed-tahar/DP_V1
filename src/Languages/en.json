@@ -1,0 +1,18 @@
+{
+  "TruckerORClient": "Do You Want To Registre As :",
+  "Trucker": "Trucker",
+  "Client": "Client",
+  "LoginAccount":"Login Account",
+  "welcomeBack":"Hello, welcome back to our account",
+  "Or":"or",
+  "LoginGoogle":"Login With Google",
+  "NotRegistered":"Not Registered yet?",
+  "CreateAccount":"Create Account",
+  "Login":"Login",
+  "Email":"Email",
+  "Password":"Password",
+  "PasswordC":"Password Confirmation",
+  "SignUp":"Sign Up Account",
+  "Conditoin":"Do you agree to all terms and conditoin",
+  "HaveAccount":"Do You have Account ?"
+}

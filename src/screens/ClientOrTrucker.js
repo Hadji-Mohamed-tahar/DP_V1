@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { AntDesign } from "@expo/vector-icons";
+import i18n from "../Languages/i18n";
 
 const ClientOrTrucker = ({ navigation }) => {
   return (
@@ -27,19 +28,21 @@ const ClientOrTrucker = ({ navigation }) => {
         className="flex-1 items-center justify-center mx-auto"
       >
         <Text className="text-white font-bold text-2xl text-center">
-          Do You Want To Registre As :
+          {/* Do You Want To Registre As : */}
+          {i18n.t('TruckerORClient')}
         </Text>
         <View style={{width : "100%"}} className=" w-full flex-row mt-8 space-x-6">
           <TouchableOpacity style={[styles.shadow , {width : "43%"}]} className="h-20 bg-white rounded-md items-center justify-center" onPress={()=>navigation.navigate("LoginClient")}>
             <AntDesign name="user" size={24} color="#FF621F" />
             <Text style={{ color: "#FF621F" }} className=" font-bold text-lg">
-              Client
+            {i18n.t('Client')}
+
             </Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.shadow , {width : "43%"}]} className="h-20 bg-white rounded-md items-center justify-center" onPress={()=>navigation.navigate("EmailTrucker")}>
             <AntDesign name="car" size={24} color="#FF621F" />
             <Text style={{ color: "#FF621F" }} className="font-bold text-lg">
-              Trucker
+            {i18n.t('Trucker')}
             </Text>
           </TouchableOpacity>
         </View>

@@ -1,10 +1,10 @@
 import { create } from "apisauce";
 //192.168.77.12 192.168.81.12
 const api = create({
-  baseURL: "http://192.168.42.12:1337",
+  baseURL: "http://192.168.244.231:1337",
   headers: {
     "X-API-Key":
-      "249c85bba47fef83ec7b16c4e38c47ff77e909dfda455ab07a47e5a177bdf29ba82c4c182fc32fa9a66047b7ca5946dbe895d6c4c908f7d66059aa6efa4bacb0381b78be61e94f91e40935ac8905809313fd61ada314319a10addde2432d9f78e04b7feb8de1b49b254e0e4dc7cd1db34f4c0a2b1ff32fab86cd4d02a4bdfdb8",
+      "4dfe469f712da5b0c65a9e0a9658f06561a7c448dea2ea6dbfb6363925f4ffd7c2950ca8f4f465c312ea750202b7f97af64932cfd64cb8b5e0e7dd563ed3884346b491e2b3632f6b12221bb6740c8a6aed3c1cb16f34963f8c6909c304c20be8ef874d73e2050af39d085a84580252ce965f10a593c5511bf90724d79e78df21",
   },
 });
 
@@ -21,7 +21,7 @@ const getUserInfoData = async () => {
 const setUser = async (user) => {
   try {
     await api.post("/api/datas", { data: user });
-    // console.log("hi")
+    console.log("hi")
   } catch (error) {
     console.error("Error setting user data:", error);
     throw error;

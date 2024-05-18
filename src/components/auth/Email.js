@@ -21,6 +21,7 @@ import Servicess from "../../Shared/Servicess";
 import { AuthContext } from "../../Context/client/AuthContext";
 import { InfoContext } from "../../Context/client/InfoContext";
 import { MenuBarContext } from "../../Context/client/MenuBarContext";
+import i18n from "../../Languages/i18n";
 
 const Email = () => {
   const [email, setEmail] = useState("");
@@ -141,7 +142,7 @@ const Email = () => {
             </View>
             <View className="pb-2">
               <TextInput
-                placeholder="Email"
+                placeholder={i18n.t("Email")}
                 onChangeText={(Text) => setEmail(Text)}
                 value={email}
               />
@@ -156,7 +157,7 @@ const Email = () => {
             </View>
             <View className="pb-2">
               <TextInput
-                placeholder="Password"
+                placeholder={i18n.t("Password")}
                 onChangeText={(Text) => setPassword(Text)}
                 value={password}
                 secureTextEntry={true}
@@ -176,7 +177,7 @@ const Email = () => {
                   onPress={signIn}
                 >
                   <Text className="text-white font-bold text-center">
-                    Login
+                  {i18n.t("Login")}
                   </Text>
                 </TouchableOpacity>
               </View>

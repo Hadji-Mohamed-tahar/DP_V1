@@ -44,7 +44,7 @@ const Welcome = ({navigation}) => {
           <Animated.View style={{ opacity: fadeAnim }}>
             {nextPage ? (
               <TouchableOpacity
-              onPress={()=>navigation.navigate("ClientOrTrucker")}
+              onPress={()=>navigation.navigate("ChooseLanguage")}
               className="flex-row w-40 h-10 rounded-lg mx-auto items-center justify-center bg-white space-x-3"
               >
                 <Text style={{color : "#FF621F"}} className="font-bold text-lg">Start</Text>

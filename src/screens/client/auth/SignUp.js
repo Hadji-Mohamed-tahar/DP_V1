@@ -13,6 +13,7 @@ import Email_Registre from "../../../components/auth/Email_Registre";
 
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
+import i18n from "../../../Languages/i18n";
 
 // import {
 //   GoogleAuthProvider,
@@ -84,10 +85,11 @@ const SignUp = ({ navigation }) => {
           style={{ fontSize: 20 }}
           className="text-black font-bold pl-9 mb-1"
         >
-          Sign Up Account
+          {i18n.t("SignUp")}
         </Text>
         <Text style={{ fontSize: 15 }} className="text-gray-400 font-bold pl-9">
-          Hello, welcome back to our account
+          {/* Hello, welcome back to our account */}
+          {i18n.t("welcomeBack")}
         </Text>
         {/* Phone or Email */}
         <View
@@ -132,7 +134,7 @@ const SignUp = ({ navigation }) => {
           <View style={{ width: 130 }} className="border-b">
             <Text className="text-white">Or</Text>
           </View>
-          <Text className="mt-1">Or</Text>
+          <Text className="mt-1">{i18n.t("Or")}</Text>
           <View style={{ width: 130 }} className="border-b">
             <Text className="text-white">Or</Text>
           </View>
@@ -149,15 +151,22 @@ const SignUp = ({ navigation }) => {
             />
             {/* <AntDesign name="google" size={24} color="white" /> */}
             <Text className="font-bold text-black text-center">
-              Sign Up With Google
+            {i18n.t("LoginGoogle")}
             </Text>
           </TouchableOpacity>
         </View>
         {/* Not registre yet */}
         <View className="mx-14 mt-4 flex-row space-x-2">
-          <Text className="text-gray-400">Do You have Account ?</Text>
+          <Text className="text-gray-400">
+            {/* Do You have Account ? */}
+            {i18n.t("HaveAccount")}         
+
+            </Text>
           <TouchableOpacity onPress={() => navigation.navigate("LoginClient")}>
-            <Text className="text-orange-500">Login Account</Text>
+            <Text className="text-orange-500">
+              {/* Login Account */}
+              {i18n.t("LoginAccount")}         
+              </Text>
           </TouchableOpacity>
         </View>
       </View>
